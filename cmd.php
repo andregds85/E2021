@@ -26,8 +26,8 @@ php artisan db:seed --class=CreateAdminUserSeeder
 
 
 
-php artisan make:seeder CategoriaSeeder
-php artisan db:seed --class=CategoriaSeeder
+php artisan make:seeder CategoriaSeederM2
+php artisan db:seed --class=CategoriaSeederM2
 
 
 
