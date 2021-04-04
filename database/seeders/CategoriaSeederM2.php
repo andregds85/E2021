@@ -848,9 +848,250 @@ class CategoriaSeederM2 extends Seeder
             'macro' => '5'
         ]);
 
+        /* Macro Meio Serra  */ 
+
+        $Categoria = Categoria::create([
+            'name' => 'FUNDACAO MEDICA ASSITENCIAL DO TRABALHADOR RURAL',
+            'cnes' => '2300982',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'FUNDACAO MEDICO SOCIAL RURAL DE PONTE ALTA',
+            'cnes' => '2300850',
+            'macro' => '6'
+        ]);
 
 
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL AMERICO CAETANO DO AMARAL',
+            'cnes' => '2566893',
+            'macro' => '6'
+        ]);
 
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL DE CARIDADE CORACAO DE JESUS',
+            'cnes' => '2300516',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL FAUSTINO RISCAROLLI',
+            'cnes' => '2300478',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL FREI ROGERIO',
+            'cnes' => '2300435',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL NOSSA SENHORA DAS GRACAS',
+            'cnes' => '2665085',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL NOSSA SENHORA DO PATROCINIO',
+            'cnes' => '2691477',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SANTA CLARA',
+            'cnes' => '2300486',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO JOSE',
+            'cnes' => '2300508',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO JOSE DE URUBICI',
+            'cnes' => '2300885',
+            'macro' => '6'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'SUPERVISAO REGIONAL DE SAUDE LAGES',
+            'cnes' => '2662906',
+            'macro' => '6'
+        ]);
+
+            /* Sul */ 
+        $Categoria = Categoria::create([
+            'name' => '2O GERSA',
+            'cnes' => '6490212',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'CLINICA DE HEMODIALISE',
+            'cnes' => '2491524',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'CLINICA DE NEFROLOGIA',
+            'cnes' => '2664895',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'FUNDACAO HOSPITALAR HENRIQUE LAGE',
+            'cnes' => '2419246',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'FUNDACAO MEDICO SOCIAL RURAL DE SAO MARTINHO',
+            'cnes' => '2550881',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'FUNDACAO SOCIAL HOSPITALAR DE ICARA',
+            'cnes' => '2420015',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL DE CARIDADE DE JAGUARUNA',
+            'cnes' => '2550962',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL DE CARIDADE SAO ROQUE',
+            'cnes' => '2419378',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL DE RIO FORTUNA',
+            'cnes' => '2386038',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL DOM JOAQUIM IMAS',
+            'cnes' => '2672839',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL MATERNO INFANTIL SANTA CATARINA',
+            'cnes' => '2594277',
+            'macro' => '7'
+        ]);
+      
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL NOSSA SENHORA DA CONCEICAO',
+            'cnes' => '2491710',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL NOSSA SENHORA DE FATIMA',
+            'cnes' => '2305623',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SANTA TERESINHA',
+            'cnes' => '2665883',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SANTO ANTONIO HSA',
+            'cnes' => '2550938',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SANTO ANTONIO IMAS',
+            'cnes' => '2299569',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO CAMILO',
+            'cnes' => '2385880',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO JOAO BATISTA',
+            'cnes' => '2691531',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO JOAO BATISTA HSJB',
+            'cnes' => '2540355',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO JUDAS TADEU',
+            'cnes' => '2305534',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO MARCOS',
+            'cnes' => '2691558',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO ROQUE',
+            'cnes' => '2299836',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL SAO SEBASTIAO',
+            'cnes' => '2778858',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HOSPITAL UNIMED CRICIUMA',
+            'cnes' => '5712068',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'HSS HOSPITAL SAO SEBASTIAO',
+            'cnes' => '2305097',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'IMAS HOSPITAL REGIONAL DE ARARANGUA DEPUTADO AFFONSO GUIZZO',
+            'cnes' => '2691515',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'ISEV UNIDADE RIO MAINA',
+            'cnes' => '2758121',
+            'macro' => '7'
+        ]);
+
+        $Categoria = Categoria::create([
+            'name' => 'SOCIMED',
+            'cnes' => '3061388',
+            'macro' => '7'
+        ]);
 
 
 
