@@ -18,7 +18,6 @@ class macroSeeder extends Seeder
            'CER MACRO NORDESTE 42C68',
            'CER MACRO SERRA 42C70',
            'CER MACRO SUL 42C67',
-           'CER MACRO SERRA 42C70',
            'CER MACRO VALE DO ITAJAI 42C63'
             ];
 
