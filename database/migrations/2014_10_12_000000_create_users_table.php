@@ -19,6 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('categorias_id')->nullable();
             $table->string('macro')->nullable();
             $table->string('perfil')->nullable();
+            $table->string('cpf')->nullable();
+            $table->string('telefone')->nullable();
+
+
             $table->timestamps();
         });
     }

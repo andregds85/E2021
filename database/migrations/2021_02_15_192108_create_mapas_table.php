@@ -19,6 +19,8 @@ class CreateMapasTable extends Migration
             $table->string('procedimento');
             $table->string('vagas');
             $table->string('passo1');
+            $table->string('login')->nulltable();
+            $table->string('cpf')->nulltable();
             $table->timestamps();
         });
     }

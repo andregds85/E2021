@@ -47,6 +47,7 @@ class MapasController extends Controller
     public function show($id){
         return view('mapas.vizualiza',['id'=>$id]);
        }
+   
 
     public function edit(mapas $mapa)
     {

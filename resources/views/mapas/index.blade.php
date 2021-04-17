@@ -10,8 +10,23 @@
             </div>
         </div>
     </div>
-   
-   
+  
+   <div><td>Macro:</td><td> {{ Auth::user()->macro}}</td> </div>
+    <?php $macroUsr=Auth::user()->macro; ?> 
+    <div><td>Hospital:</td><td> {{ Auth::user()->categorias_id}}</td> </div>
+    <?php $hospUsr=Auth::user()->categorias_id; ?> 
+
+ <?php
+use App\Http\Controllers\MapasController;
+use App\Models\mapas;
+
+
+
+$tabela = mapas::all(); 
+$itens = mapas::where('categoria_id',$hospUsr)->get();
+?>
+
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -30,7 +45,7 @@
 
             <th width="280px">Ação</th>
         </tr>
-	    @foreach ($mapas as $mapa)
+	    @foreach ($itens as $mapa)
 	    <tr>
 	        <td>{{$mapa->id }}</td>
 	        <td>{{$mapa->categoria_id}}</td>
@@ -42,12 +57,12 @@
 
                 <form action="{{ route('mapas.destroy',$mapa->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('mapas.show',$mapa->id) }}">Mostrar</a>
-                                                        
+               <?php /*                                         
                     @csrf
                     @method('DELETE')
                     @can('mapas-delete')
                     <button type="submit" class="btn btn-danger">Deletar</button>
-                    @endcan
+                    @endcan  */ ?>
                 </form>
 	        </td>
 	    </tr>

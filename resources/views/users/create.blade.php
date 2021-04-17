@@ -125,6 +125,21 @@ echo $id;
         </div>
 </div>
 
+<div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12">
+		        <div class="form-group">
+		            <strong>CPF:</strong>
+		            <input type="text" name="cpf" class="form-control" placeholder="Entre com o cpf">
+           </div>
+
+
+           <div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12">
+		        <div class="form-group">
+		            <strong>Telefone:</strong>
+		            <input type="text" name="telefone" class="form-control" placeholder="Entre com o telefone">
+           </div>          
+
 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>

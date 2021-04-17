@@ -20,6 +20,8 @@ class User extends Authenticatable
         'categorias_id',
         'macro',
         'perfil',
+        'cpf',
+        'telefone',
 
     ];
 
