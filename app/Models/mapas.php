@@ -18,5 +18,8 @@ class mapas extends Model
         'procedimento',
         'vagas',
         'passo1',
+        'login',
+        'cpf',
+
       ];
 }

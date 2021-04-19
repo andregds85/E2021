@@ -2,7 +2,7 @@
 @section('content')
   
 <?php $hospital=Auth::user()->categorias_id; ?>
-<?php $login=Auth::user()->login; ?>
+<?php $login=Auth::user()->email; ?>
 <?php $cpf=Auth::user()->cpf; ?>
 
     <div class="row">
@@ -114,23 +114,22 @@
 
     <div class="form-group">
     <label for="exampleInputCategoria">Login </label>
-    <select class="form-control" name=login> id="confirma">
-    <option value='<?php echo $login ?>' >{{Auth::user()->categorias_id}}</option>
+    <select class="form-control" name="login"> 
+    <option value='<?php echo $login ?>' >{{Auth::user()->email}}</option>
     </select>
     </div>
 
 
     <div class="form-group">
     <label for="exampleInputCategoria">CPF</label>
-    <select class="form-control" name="passo1" id="confirma">
+    <select class="form-control" name="cpf" id="cpf">
     <option value='<?php echo $cpf ?>' >{{Auth::user()->cpf}}</option>
     </select>
     </div>
 
 
-
-		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-		            <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+	   <button type="submit" class="btn btn-primary">Cadastrar</button>
 		    </div>
 		</div>
     </form>

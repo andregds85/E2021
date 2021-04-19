@@ -12,7 +12,6 @@ php artisan make:seeder PermissionTableSeeder
 php artisan db:seed --class=PermissionTableSeeder
 
 
-
 php artisan make:seeder macroSeeder
 
 php artisan db:seed --class=macroSeeder
