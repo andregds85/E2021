@@ -12,11 +12,11 @@ $itens = mapas::where('id',$id)->get();
     <?php $hospUsr=Auth::user()->categorias_id; ?> 
 <table class="table table-bordered">
         <tr>
-            <th>id</th>
-            <th>Hospital</th>
-            <th>Nome do Mapa</th>
-            <th>Nome</th>
-            <th width="280px">Ação</th>
+            <td>id</td>
+            <td>Hospital</td>
+            <td>Nome do Mapa</td>
+            <td>Nome</td>
+            <td width="280px">Ação</td>
         </tr>
 <tr>
 @foreach ($itens as $mapa)
