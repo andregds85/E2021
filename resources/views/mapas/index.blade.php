@@ -42,10 +42,11 @@ $itens = mapas::where('categoria_id',$hospUsr)->get();
             <th>Especialidade</th>
             <th>Procedimento</th>
             <th>Vagas</th>
-
             <th width="280px">Ação</th>
         </tr>
+
 	    @foreach ($itens as $mapa)
+        
 	    <tr>
 	        <td>{{$mapa->id }}</td>
 	        <td>{{$mapa->categoria_id}}</td>

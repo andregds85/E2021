@@ -10,19 +10,57 @@ $tabela = mapas::all();
 $itens = mapas::where('id',$id)->get();
 ?>
     <?php $hospUsr=Auth::user()->categorias_id; ?> 
-<table class="table table-bordered">
-        <tr>
-            <td>id</td>
-            <td>Hospital</td>
-            <td>Nome do Mapa</td>
-            <td>Nome</td>
-            <td width="280px">Ação</td>
-        </tr>
-<tr>
-@foreach ($itens as $mapa)
-	    <tr>
-	        <td>{{$mapa->id }}</td>
-	        <td>{{$mapa->categoria_id}}</td>
+
+
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2> Detalhamento do Mapa</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('mapas.index') }}"> Voltar</a>
+            </div>
+        </div>
+    </div><br><br>
+
+    @foreach ($itens as $mapa)
+  
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Id:</strong>
+                {{ $mapa->id }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Hospital:</strong>
+                {{$mapa->categoria_id}}
+            </div>
+        </div>
+
+        <?php   $hospital=$mapa->categoria_id; 
+
+        if ($hospital <> $hospUsr){
+                            ?>
+      
+            <script>
+            window.location.href = "/";
+            </script>
+
+            <?php
+            } ?>
+
+
+
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Nome do Mapa:</strong>
+                {{ $mapa->nome }}
+            </div>
+        </div>
 <?php   $hospital=$mapa->categoria_id; 
 
         if ($hospital <> $hospUsr){
@@ -35,20 +73,61 @@ $itens = mapas::where('id',$id)->get();
         <?php
         } ?>
 
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Descrição:</strong>
+                {{$mapa->descricao}}
+            </div>
+        </div>
+       
+       
+       
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Especialidade:</strong>
+                {{$mapa->especialidade}}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Código do Procedimento:</strong>
+                {{$mapa->cod_procedimento}}
+            </div>
+        </div>
 
 
-	        <td>{{$mapa->nome}}</td>
-            <td>{{$mapa->especialidade }}</td>
-            <td>{{$mapa->procedimento}}</td>
-            <td>{{$mapa->vagas}}</td>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Procedimento:</strong>
+                {{$mapa->procedimento}}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Vagas:</strong>
+                {{$mapa->vagas}}
+            </div>
+        </div>
+
+
+
+        
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Login:</strong>
+                {{$mapa->login}}
+            </div>
+        </div>
+
+
+                
+      
+    
 	      
-</tr>
  @endforeach
-</table>
 
-
-
-
-<p class="text-center text-primary"><small>Hospital</small></p>
 @endsection
 
