@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 
 class MapasController extends Controller
 {
-  
-    function __construct()
+      function __construct()
     {
          $this->middleware('permission:mapas-list|mapas-create|mapas-edit|mapas-delete', ['only' => ['index','show']]);
          $this->middleware('permission:mapas-create', ['only' => ['create','store']]);
@@ -64,7 +63,7 @@ class MapasController extends Controller
             'cod_procedimento' => 'required',
             'procedimento' => 'required',
             'vagas' => 'required',
-        ]);
+   ]);
 
         $mapa->update($request->all());
         return redirect()->route('mapas.index')

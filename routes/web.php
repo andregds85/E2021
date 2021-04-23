@@ -13,6 +13,10 @@ use App\Http\Controllers\MapasController;
 use App\Http\Controllers\MacroController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\macro;
+use App\Http\Controllers\mapasRegController;
+
+
+
 
 
 
@@ -37,6 +41,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('mapas', MapasController::class);
     Route::resource('manual', ManualController::class);
     Route::resource('macro', macro::class);
+    Route::resource('mapasReg', mapasRegController::class);
+
 
 
     Route::get('import_exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@importExport');

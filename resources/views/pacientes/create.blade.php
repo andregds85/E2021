@@ -189,24 +189,23 @@
 
       <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Status da Solicitação</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Visualização em Mapa</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios1" value="Verificada" checked>
+          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios1" value="S">
           <label class="form-check-label" for="gridRadios1">
-           Verificada
+           S
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios2" value="Não Verificada">
+          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios2" value="N" checked>
           <label class="form-check-label" for="gridRadios2">
-            Não Verificada
+            N
           </label>
         </div>
         </div>
     </div>
   </fieldset>
-
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
 		    </div>

@@ -185,18 +185,18 @@
 
         <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Status da Solicitação</legend>
+      <legend class="col-form-label col-sm-2 pt-0">Visualizado em Mapa</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios1" value="Verificada" checked>
+          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios1" value="S">
           <label class="form-check-label" for="gridRadios1">
-           Verificada
+           S
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios2" value="Não Verificada">
+          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios2" value="N" checked>
           <label class="form-check-label" for="gridRadios2">
-            Não Verificada
+            N
           </label>
         </div>
         </div>
@@ -209,15 +209,15 @@
       <legend class="col-form-label col-sm-2 pt-0">Vizualização</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="label" id="Vizualizacao" value="1" checked>
+          <input class="form-check-input" type="radio" name="Vizualizacao" id="Vizualizacao" value="1">
           <label class="form-check-label" for="gridRadios1">
-           SIM
+           S
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="label" id="vizualizacao" value="0">
+          <input class="form-check-input" type="radio" name="Vizualizacao" id="vizualizacao" value="0" checked>
           <label class="form-check-label" for="gridRadios2">
-            NÃO
+           N
           </label>
         </div>
         </div>
