@@ -2,9 +2,7 @@
 @section('content')
 
 <div><td>Macro:</td><td> {{ Auth::user()->macro}}</td> </div>
-
 <?php $m=Auth::user()->macro; ?>
-
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -31,24 +29,25 @@
 ?>
     <table class="table table-bordered">
         <tr>
-            <th>Status</th>
+            <th>MAPA</th>
             <th>Solicitação</th>
             <th>Hospital</th>
             <th width="280px">Ação</th>
         </tr>
 <?php
 
-
-
- $itensP = pacientes::where('macro',$m)->get();
-
+/*$itensP = pacientes::where('macro',$m)->get(); */
+ $itensP = Pacientes::select("*")
+->where([
+["statusSolicitacao", "=", 'N'],
+["macro", "=", "$m"]
+])->get();
 ?>
 
 	    @foreach ($itensP as $paciente)
 	    <tr>
-
-            <td>{{ $paciente->statusSolicitacao }}</td>
-            <td>{{ $paciente->solicitacao }}</td>
+            <td>{{$paciente->statusSolicitacao}}</td>
+            <td>{{$paciente->solicitacao }}</td>
             <?php $a=$paciente->categorias_id; ?>
 
                 @foreach($tabela as $item)
@@ -79,6 +78,5 @@
     </table>
 
     {!! $pacientes->links() !!}
-
 <p class="text-center text-primary"><small>Pacientes</small></p>
 @endsection
