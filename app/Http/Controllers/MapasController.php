@@ -56,6 +56,7 @@ class MapasController extends Controller
      public function update(Request $request, mapas $mapa)
     {
          request()->validate([
+            'macro' => 'required',
             'categorias_id' => 'required',
             'nome' => 'required',
             'descricao' => 'required',

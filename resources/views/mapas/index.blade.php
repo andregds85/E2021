@@ -20,8 +20,6 @@
 use App\Http\Controllers\MapasController;
 use App\Models\mapas;
 
-
-
 $tabela = mapas::all(); 
 $itens = mapas::where('categoria_id',$hospUsr)->get();
 ?>

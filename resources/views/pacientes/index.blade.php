@@ -42,9 +42,8 @@
 ["statusSolicitacao", "=", 'N'],
 ["macro", "=", "$m"]
 ])->get();
-?>
-
-	    @foreach ($itensP as $paciente)
+?>	
+    @foreach ($itensP as $paciente)
 	    <tr>
             <td>{{$paciente->statusSolicitacao}}</td>
             <td>{{$paciente->solicitacao }}</td>

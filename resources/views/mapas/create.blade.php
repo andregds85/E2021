@@ -2,6 +2,7 @@
 @section('content')
   
 <?php $hospital=Auth::user()->categorias_id; ?>
+<?php $userMacro=Auth::user()->macro; ?>
 <?php $login=Auth::user()->email; ?>
 <?php $cpf=Auth::user()->cpf; ?>
 
@@ -62,6 +63,30 @@
             </select>
             </div>
        
+
+
+            <div class="row">
+ <div class="col-xs-12 col-sm-12 col-md-12">
+ <div class="form-group">
+ <label for="exampleInputCategoria">
+     
+    <select class="form-control" name="macro" id="macro">
+                     
+      <option value=' {{Auth::user()->macro}}' >{{Auth::user()->macro}}</option>
+            
+            </select>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

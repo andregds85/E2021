@@ -1,25 +1,56 @@
 @extends('layouts3.app')
 @section('content')
 
-<!-- topo !-->
-<div class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title"><b>Mapas Reg</b></h5>
-      <h6 class="card-title"><b></b></h6>
-        <BR>
-    </div>
-  </div>
-
- <!-- Passo 1 !-->
+<!-- Passo 1 !-->
   <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title"><b>Macros</b></h5>
+        <h5 class="card-title"><b>Mapas da Regulação</b></h5>
         <h6 class="card-title"><b></b></h6>
-          <BR>
-        <p class="card-text"><b>Passo 1 </b></p>
-        <p class="card-text">Cadastrar todas as Macros </p>
+              
+        <p class="card-text"><b><div><td>Macro:</td><td> {{ Auth::user()->macro}}</td> </div>
+        <?php $macroUsr=Auth::user()->macro; ?> </b></p>
+
+        <p class="card-text"> <div><td>Hospital:</td><td> {{ Auth::user()->categorias_id}}</td> </div>
+       <?php $hospUsr=Auth::user()->categorias_id; ?>  </p>
       </div>
     </div>
+ <?php
+use App\Http\Controllers\MapasController;
+use App\Models\mapas;
+/*
+$tabela = mapas::all(); 
+$itens = mapas::where('macro',$macroUsr)->get();  */
+
+/* 
+Na hora de cadastrar o Mapa precisa pegar qual 
+macro é o hospital */ 
+
+?>
+
+
+
+
+
+
+
+
+
+
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Passo 2 !-->

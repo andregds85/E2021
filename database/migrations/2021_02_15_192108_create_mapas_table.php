@@ -11,6 +11,7 @@ class CreateMapasTable extends Migration
     {
         Schema::create('mapas', function (Blueprint $table) {
             $table->id();
+            $table->string('macro');
             $table->string('categoria_id');
             $table->string('nome');
             $table->text('descricao');

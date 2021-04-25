@@ -32,6 +32,20 @@ $itens = mapas::where('id',$id)->get();
                 {{ $mapa->id }}
             </div>
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Macro:</strong>
+                {{$mapa->macro}}
+            </div>
+        </div>
+
+
+
+
+
+
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Hospital:</strong>
