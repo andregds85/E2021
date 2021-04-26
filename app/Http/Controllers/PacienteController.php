@@ -57,8 +57,7 @@ class PacienteController extends Controller
 
      public function edit(Pacientes $paciente)
     {
-       
-        return view('pacientes.edit',compact('paciente'));
+       return view('pacientes.edit',compact('paciente'));
     
     }
 

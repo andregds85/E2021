@@ -50,6 +50,7 @@ return array(
     'App\\Models\\administrador' => $baseDir . '/app/Models/administrador.php',
     'App\\Models\\buscaCategoria' => $baseDir . '/app/Models/buscaCategoria.php',
     'App\\Models\\categoriaMapas' => $baseDir . '/app/Models/categoriaMapas.php',
+    'App\\Models\\incluir_mapa_p2' => $baseDir . '/app/Models/incluir_mapa_p2.php',
     'App\\Models\\macro' => $baseDir . '/app/Models/macro.php',
     'App\\Models\\mapas' => $baseDir . '/app/Models/mapas.php',
     'App\\Models\\soudohospital' => $baseDir . '/app/Models/soudohospital.php',

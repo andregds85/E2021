@@ -1,6 +1,8 @@
 @extends('layouts3.app')
 @section('content')
 
+
+
 <!-- Passo 1 !-->
   <div class="card mb-3">
       <div class="card-body">
@@ -32,26 +34,6 @@ $itens = mapas::where('macro',$macroUsr)->get();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
-
     @foreach ($itens as $mapa)
         
 
@@ -69,28 +51,7 @@ $itens = mapas::where('macro',$macroUsr)->get();
           <p class="card-text"><b> Atualizado em : {{$mapa->updated_at }} </b></p>
         </div>
       </div>
-
-    	 
-
-	
-
-
-
-
-
 	    @endforeach
-
-
-
-   
-
-
-
-
-
-
-
-
 @endsection
 
 

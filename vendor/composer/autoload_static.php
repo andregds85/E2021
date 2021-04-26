@@ -667,6 +667,7 @@ class ComposerStaticInitad427575ce04c5c654559c701f2d00a8
         'App\\Models\\administrador' => __DIR__ . '/../..' . '/app/Models/administrador.php',
         'App\\Models\\buscaCategoria' => __DIR__ . '/../..' . '/app/Models/buscaCategoria.php',
         'App\\Models\\categoriaMapas' => __DIR__ . '/../..' . '/app/Models/categoriaMapas.php',
+        'App\\Models\\incluir_mapa_p2' => __DIR__ . '/../..' . '/app/Models/incluir_mapa_p2.php',
         'App\\Models\\macro' => __DIR__ . '/../..' . '/app/Models/macro.php',
         'App\\Models\\mapas' => __DIR__ . '/../..' . '/app/Models/mapas.php',
         'App\\Models\\soudohospital' => __DIR__ . '/../..' . '/app/Models/soudohospital.php',

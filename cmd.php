@@ -80,7 +80,7 @@ Layouts 3       Regulação
 Layouts 4       Administrador
 
 
-php artisan make:model administrador -m       --
+php artisan make:model incluir_mapa_p2 -m       --
 
 
 
