@@ -14,6 +14,7 @@ use App\Http\Controllers\MacroController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\macro;
 use App\Http\Controllers\mapasRegController;
+
 use App\Http\Controllers\incluirMapaP2sController;
 
 
@@ -45,15 +46,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('macro', macro::class);
     Route::resource('mapasReg', mapasRegController::class);
     Route::resource('incluirMapaP2s', IncluirMapaP2sController::class);
+    Route::resource('continua', mapasRegController::class);
 
     
-
     /* url chamando um methodo do Controller 
     Route::get('pacienteMapa', 'App\Http\Controllers\mapasRegController@incluirPaciente');
     */
 
-
-
+   
     Route::get('import_exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@importExport');
     Route::post('importpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@import');
     Route::get('exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@export');

@@ -16,7 +16,7 @@ class PacienteController extends Controller
          $this->middleware('permission:regulacao-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:regulacao-delete', ['only' => ['destroy']]);
     }
-     public function index()
+    public function index()
     {
          $pacientes = Pacientes::orderby('id', 'asc')->paginate();
          return view('pacientes.index',compact('pacientes'));
@@ -41,7 +41,7 @@ class PacienteController extends Controller
             'datasolicitacao' =>'required',
             'unidadedesejada' => 'required',
             'codigo' => 'required',
-          ]);
+        ]);
 
         Pacientes::create($request->all());
         return redirect()->route('pacientes.index')
@@ -50,15 +50,16 @@ class PacienteController extends Controller
 
     public function show(Pacientes $paciente)
     {
-     
+   
         return view('pacientes.show',compact('paciente'));
     
     }
 
      public function edit(Pacientes $paciente)
     {
-       return view('pacientes.edit',compact('paciente'));
-    
+   
+        return view('pacientes.edit',compact('paciente'));
+   
     }
 
      public function update(Request $request, Pacientes $paciente)
@@ -74,8 +75,8 @@ class PacienteController extends Controller
             'codigo' => 'required',
            ]);
            
-        $paciente->update($request->all());
-        return redirect()->route('pacientes.index')
+    $paciente->update($request->all());
+    return redirect()->route('pacientes.index')
                         ->with('Sucesso','Paciente Atualizado com Sucesso');
     }
   

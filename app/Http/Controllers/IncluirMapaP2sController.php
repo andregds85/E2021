@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\mapas;
+use App\Models\pacientes;
+use App\Models\incluir_mapa_p2;
 
 
 class IncluirMapaP2sController extends Controller
@@ -20,11 +22,12 @@ class IncluirMapaP2sController extends Controller
  
     public function index()
     {
-        $mapas = mapas::latest()->paginate(5);
         return view('IncluirMapaP2s.index',compact('mapas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
     
+    
+
 
 
 }

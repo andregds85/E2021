@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class incluir_mapa_p2 extends Model
+class incluir_mapa_p2A extends Model
 {
     use HasFactory;
     protected $table="mapas";

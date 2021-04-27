@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\mapas;
+use App\Models\pacientes;
+
 
 
 class mapasRegController extends Controller
@@ -26,5 +28,21 @@ class mapasRegController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    
+    public function show()
+    {
+        return view('mapasReg.continua');
+    }
+
+    public function create()
+    {
+        return view('mapasReg.create');
+    }
+
+ 
 }
+
+
+
+
+
+

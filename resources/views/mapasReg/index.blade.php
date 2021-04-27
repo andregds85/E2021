@@ -1,8 +1,5 @@
 @extends('layouts3.app')
 @section('content')
-
-
-
 <!-- Passo 1 !-->
   <div class="card mb-3">
       <div class="card-body">
@@ -31,11 +28,8 @@ $itens = mapas::where('macro',$macroUsr)->get();
         </div>
     @endif
 
-
-
-
     @foreach ($itens as $mapa)
-        
+       
 
    <!-- Passo 2 !-->
     <div class="card mb-3">

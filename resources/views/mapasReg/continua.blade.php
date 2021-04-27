@@ -57,11 +57,11 @@
                     echo "</td>";
                 } ?>
                 @endforeach
-	        <td>
-            <form action="{{route('pacientes.destroy',$paciente->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('pacientes.show',$paciente->id) }}">Incluir no Mapa</a>
-            </form>
-	        </td>
+	   <td>
+       <p class="card-text">
+       <a href="{{route('mapasReg.create', ['id' => $paciente->id]) }}">Próxima Etapa</a>
+       </p>
+      </td>
 	    </tr>
 	    @endforeach
     </table>
