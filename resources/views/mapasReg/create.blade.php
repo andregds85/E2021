@@ -163,6 +163,35 @@ Operação realizada com sucesso
 <!-- fim do trecho de chamda de categorias -->
 <br>
 
+<?php 
+use App\Models\mapas;
+$tabelaMapa = mapas::all();
+
+?>
+	           
+           <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">id do Mapa / Id do Hospital / Nome do Mapa</label>
+                <select class="form-control" name="idmapa" id="idMapa">
+                @foreach ($tabelaMapa as $mapas)
+                <option value='{{$mapas->id }}' > {{$mapas->id }} {{$mapas->categoria_id}}{{$mapas->nome }}</option>
+                @endforeach
+                </select>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
 		  <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
@@ -177,8 +206,6 @@ Operação realizada com sucesso
 		            <strong>CNS:</strong>
 		            <input type="text" name="cns" class="form-control" placeholder="Entre com o CNS">
         </div>
-
-
 
         <div class="row">
 		    <div class="col-xs-12 col-sm-12 col-md-12">
