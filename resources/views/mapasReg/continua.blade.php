@@ -21,7 +21,6 @@
     <?php
     use App\Models\Categoria;
     use App\Models\Pacientes;
-
     $tabela = categoria::all();
 ?>
     <table class="table table-bordered">
