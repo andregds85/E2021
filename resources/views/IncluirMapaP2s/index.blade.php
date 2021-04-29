@@ -58,7 +58,7 @@
                 @endforeach
 	   <td>
        <p class="card-text">
-       <a href="{{route('mapasReg.create', ['id' => $paciente->id]) }}">Próxima Etapa</a>
+       <a href="{{route('incluirMapaP2s.create', ['id' => $paciente->id]) }}">Próxima Etapa</a>
        </p>
       </td>
 	    </tr>

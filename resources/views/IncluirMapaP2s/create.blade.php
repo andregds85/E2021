@@ -65,14 +65,13 @@ if($mpac<>$m){
             <td>{{$paciente->cns }}</td>
             <td>{{$paciente->nomedousuario }}</td>
             <td>{{$paciente->statusSolicitacao}}</td>
+            <td>{{$paciente->municipio}}
       </tr>
     @endforeach 
 </table>
 
 
-<?php
-Pacientes::where('id', $id)->update(['statusSolicitacao' => 'S']); 
-?>
+
 
 <div class="alert alert-dark" role="alert">
 
@@ -156,7 +155,7 @@ Operação realizada com sucesso
 
 
 
-<form action="{{ route('pacientes.store') }}" method="POST">
+<form action="{{ route('incluirMapaP2s.store') }}" method="POST">
     	@csrf
 
 <!-- chama  a tabela categorias dentro da tabela pacientes -->
@@ -166,15 +165,18 @@ Operação realizada com sucesso
 <?php 
 use App\Models\mapas;
 $tabelaMapa = mapas::all();
+$tabelaM = mapas::where('macro',$m)->get();
+
 
 ?>
 	           
-           <div class="row">
+             
+ <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
                 <label for="exampleInputCategoria">id do Mapa / Id do Hospital / Nome do Mapa</label>
-                <select class="form-control" name="idmapa" id="idMapa">
-                @foreach ($tabelaMapa as $mapas)
+                <select class="form-control" name="idMapa" id="idMapa">
+                @foreach ($tabelaM as $mapas)
                 <option value='{{$mapas->id }}' > {{$mapas->id }} {{$mapas->categoria_id}}{{$mapas->nome }}</option>
                 @endforeach
                 </select>
@@ -184,152 +186,100 @@ $tabelaMapa = mapas::all();
 
 
 
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Id do Paciente</label>
+                <select class="form-control" name="idPaciente" id="idPaciente">
+                <option value='<?php echo $id; ?>'><?php echo $id; ?></option>
+                </select>
+            </div>
+        </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Código da Solicitação</label>
+                <select class="form-control" name="codSolicitacao" id="codSolicitacao">
+                <option value='{{$paciente->solicitacao }}'>{{$paciente->solicitacao}}</option>
+                </select>
+            </div>
+        </div>
+</div> 
 
 
 
+       <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">CNS</label>
+                <select class="form-control" name="cns" id="cns">
+                <option value='{{$paciente->cns }}'>{{$paciente->cns }}</option>
+                </select>
+            </div>
+        </div>
+</div> 
 
 
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Nome do Usuário</label>
+                <select class="form-control" name="nomeUsuario" id="nomeUsuario">
+                <option value='{{$paciente->nomedousuario}}'>{{$paciente->nomedousuario}}</option>
+                </select>
+            </div>
+        </div>
+</div> 
+
+
+
+<?php 
+$usuarioSistema=Auth::user()->email; 
+$cpfUsuarioSistema=Auth::user()->cpf;
+?>
 
 
 
 <div class="row">
-		  <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Solicitação:</strong>
-		            <input type="text" name="solicitacao" class="form-control" placeholder="Entre com o Número da Solicitação ">
-       </div>
-
-
-        <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>CNS:</strong>
-		            <input type="text" name="cns" class="form-control" placeholder="Entre com o CNS">
-        </div>
-
-        <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Nome do Usuário:</strong>
-		            <input type="text" name="nomedousuario" class="form-control" placeholder="Entre com o Nome do Usuário">
-        </div>
-
-
-
-
-        <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Nome do Municipio:</strong>
-		            <input type="text" name="municipio" class="form-control" placeholder="Entre com o Nome do Municipio">
-        </div>
-
-
-
-
-          <div class="row">
-		   <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Data de Solicitação</strong>
-		            <input type="date" name="datasolicitacao" class="form-control" placeholder="Entre com a Data de Solicitação">
-           </div>
-
-
-
-      <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Unidade Desejada</strong>
-		            <input type="text" name="unidadedesejada" class="form-control" placeholder="Entre com a Unidade Desejada">
-           </div>
-
-
-
-          <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Código</strong>
-		            <input type="text" name="codigo" class="form-control" placeholder="Entre com o Código">
-           </div>
-
-
-
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <strong>Observacao 1 :</strong>
-                <textarea class="form-control" style="height:150px" name="observacao1" placeholder="Observacao 1"></textarea>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="Municipio">Nome do Municipio</label>
+                <select class="form-control" name="municipio" id="municipio">
+                <option value='{{$paciente->municipio}}'>{{$paciente->municipio}}</option>
+                </select>
             </div>
         </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <strong>Observacao 2 :</strong>
-                <textarea class="form-control" style="height:150px" name="observacao2" placeholder="Observacao 2"></textarea>
+</div>        
+   <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Usuário do Sistema</label>
+                <select class="form-control" name="usuarioSistema" id="usuarioSistema">
+                <option value='<?php echo $usuarioSistema; ?>'><?php echo $usuarioSistema; ?></option>
+                </select>
             </div>
         </div>
-        </div>
+</div>            
 
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <strong>Observacao 3 :</strong>
-                <textarea class="form-control" style="height:150px" name="observacao3" placeholder="Observacao 3"></textarea>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">CPF do Operador</label>
+                <select class="form-control" name="cpfUsuarioSistema" id="cpfUsuarioSistema">
+                <option value='<?php echo $cpfUsuarioSistema; ?>'><?php echo $cpfUsuarioSistema; ?></option>
+                </select>
             </div>
         </div>
-        </div>
-
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <strong>Observacao 4 :</strong>
-                <textarea class="form-control" style="height:150px" name="observacao4" placeholder="Observacao 4"></textarea>
-            </div>
-        </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-              <strong>Observacao 5 :</strong>
-                <textarea class="form-control" style="height:150px" name="observacao5" placeholder="Observacao 1"></textarea>
-            </div>
-        </div>
-        </div>
-
-
-
-
-      <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Visualização em Mapa</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios1" value="S">
-          <label class="form-check-label" for="gridRadios1">
-           S
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="statusSolicitacao" id="gridRadios2" value="N" checked>
-          <label class="form-check-label" for="gridRadios2">
-            N
-          </label>
-        </div>
-        </div>
-    </div>
-  </fieldset>
-		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+</div>       
+<br>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Confirmar Inserção do Paciente</button>
 		    </div>
 		</div>
     </form>
 @endsection
-
-
-
 

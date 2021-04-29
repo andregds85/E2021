@@ -61,11 +61,20 @@ $itens = mapas::where('categoria_id',$hospUsr)->get();
         
 	    <tr>
 	        <td>{{$mapa->id }}</td>
+            <?php $idM=$mapa->id; ?>
 	        <td>{{$mapa->categoria_id}}</td>
 	        <td>{{$mapa->nome}}</td>
             <td>{{$mapa->especialidade }}</td>
             <td>{{$mapa->procedimento}}</td>
             <td>{{$mapa->vagas}}</td>
+
+
+
+
+<?php
+Pacientes::where('id', $idM)->update(['statusSolicitacao' => 'S']); 
+?>
+
 	        <td>
 
                 <form action="{{ route('mapas.destroy',$mapa->id) }}" method="POST">

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\incluir_mapa_p2;
 use App\Models\mapas;
-use App\Models\pacientes;
+
 
 
 
@@ -20,17 +21,19 @@ class mapasRegController extends Controller
          $this->middleware('permission:mapas-delete', ['only' => ['destroy']]);
     }
 
-   
     public function index()
     {
-        $mapas = mapas::latest()->paginate(5);
-        return view('mapasReg.index',compact('mapas'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('mapasReg.index');
     }
 
     public function show()
     {
         return view('mapasReg.continua');
+    }
+
+    public function edit()
+    {
+        return view('mapasReg.teste');
     }
 
     public function create()
@@ -40,9 +43,3 @@ class mapasRegController extends Controller
 
  
 }
-
-
-
-
-
-

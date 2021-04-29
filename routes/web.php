@@ -14,12 +14,7 @@ use App\Http\Controllers\MacroController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\macro;
 use App\Http\Controllers\mapasRegController;
-
 use App\Http\Controllers\incluirMapaP2sController;
-
-
-
-
 
 
 
