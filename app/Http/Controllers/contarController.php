@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\mapas;
+use App\Models\incluir_mapa_p2;
 
 
-
-
-class mapasRegController extends Controller
+class contarController extends Controller
 {
 
     function __construct()
@@ -19,24 +17,16 @@ class mapasRegController extends Controller
          $this->middleware('permission:mapas-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:mapas-delete', ['only' => ['destroy']]);
     }
+ 
 
     public function index()
     {
-        return view('mapasReg.index');
+        return view('contar.index');
     }
-
-    public function show()
-    {
-        return view('mapasReg.continua');
-    }
-
-    public function create()
-    {
-        return view('mapasReg.create');
-    }
+  
 
 
 
-
-
+    
+    
 }

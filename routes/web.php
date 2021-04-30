@@ -15,6 +15,8 @@ use App\Http\Controllers\ManualController;
 use App\Http\Controllers\macro;
 use App\Http\Controllers\mapasRegController;
 use App\Http\Controllers\incluirMapaP2sController;
+use App\Http\Controllers\contarController;
+
 
 
 
@@ -42,10 +44,19 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('mapasReg', mapasRegController::class);
     Route::resource('incluirMapaP2s', IncluirMapaP2sController::class);
     Route::resource('continua', mapasRegController::class);
+    Route::resource('vizualiza', mapasRegController::class);
+    Route::resource('contar', contarController::class);
+
+
+    
+
+
+
+
 
     
     /* url chamando um methodo do Controller 
-    Route::get('pacienteMapa', 'App\Http\Controllers\mapasRegController@incluirPaciente');
+    Route::get('pacienteMapa', 'App\Http\Controllers\mapasRegController@abc');
     */
 
    
