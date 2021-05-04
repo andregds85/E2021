@@ -37,9 +37,10 @@ $todos= incluir_mapa_p2::all();
             <p>{{ $message }}</p>
         </div>
     @endif
+
+
 @foreach ($itens as $mapa)
        
-
    <!-- Passo 2 !-->
     <div class="card mb-3">
         <div class="card-body">
@@ -53,21 +54,21 @@ $todos= incluir_mapa_p2::all();
           <p class="card-text"><b> Vagas: {{$mapa->vagas }} </b></p>
           <p class="card-text"><b> Criado em : {{$mapa->created_at }} </b></p>
           <p class="card-text"><b> Atualizado em : {{$mapa->updated_at }} </b></p>
-          
- <td>
+  
+       <td>
        <p class="card-text">
        <a href="{{route('contar.index', ['id' => $mapa->id]) }}">Próxima Etapa</a>
        </p>
       </td>
-
      </td>
+
 
 
      <?php
    /*echo route('contar', ['id' => 1]); */
    /*
     echo  $contarVagas=incluir_mapa_p2::where('idMapa', 3)->count();
-        */
+   */
      ?>
         </div>
       </div>
@@ -75,4 +76,23 @@ $todos= incluir_mapa_p2::all();
 @endsection
 
 
+
+Nome: Amélia Vieira
+CPF: 889.823.869-04
+e-mail: liavieira51@yahoo.com.br
+Celular: (47) 99763-4902
+Hospital Regional Hans Dieter Schmidt
+
+Login:vieiraa
+Senha:102030
+
+
+Nome: Joseane Aparecida Fernandes dos Santos
+CPF: 871.668.799-04
+e-mail:joseaneapafer@gmail.com
+Celular: (47) 99951-9577
+Hospital Regional Hans Dieter Schmidt
+
+Login:joseaneaf
+Senha:102030
 

@@ -14,6 +14,7 @@ class ManualController extends Controller
         return view("mapasReg.index");
     }
 
+   
     
 
 

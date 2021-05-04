@@ -1,71 +1,79 @@
 @extends('layouts3.app')
 @section('content')
+<?php
+use App\Http\Controllers\MapasController;
+use App\Models\mapas;
 
-<!-- topo !-->
+use App\Http\Controllers\IncluirMapaP2sController;
+use App\Models\incluir_mapa_p2;
+
+$id=$_GET['id']; 
+$tabela = mapas::all(); 
+$itens  = mapas::where('id',$id)->get();
+?>
+
+@foreach ($itens as $mapa)
+       
+   <!-- Passo 2 !-->
+    <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><b>Hospital : {{$mapa->categoria_id}}</b></h5>
+          <h6 class="card-title"><b></b></h6>
+          <p class="card-text"><b> Id: {{$mapa->id }} </b></p>
+          <?php $idm=$mapa->id; ?>
+          <p class="card-text"><b> Nome do Mapa: {{$mapa->nome }} </b></p>
+          <p class="card-text"><b> Especialidade: {{$mapa->especialidade }} </b></p>
+          <p class="card-text"><b> Procedimento: {{$mapa->procedimento }} </b></p>
+          <p class="card-text"><b> Vagas: {{$mapa->vagas }} </b></p>
+          <p class="card-text"><b> Criado em : {{$mapa->created_at }} </b></p>
+          <p class="card-text"><b> Atualizado em : {{$mapa->updated_at }} </b></p>
+      </div>  
+      </div> 
+ @endforeach
+
 <div class="card mb-3">
     <div class="card-body">
-      <h5 class="card-title"><b>Manual de configuração do sistema</b></h5>
+      <h5 class="card-title"><b>Total de pacientes nesse mapa : 
+      <b><?php 
+      echo $contarVagas=incluir_mapa_p2::where('idMapa', $idm)->count();
+      ?>
+      </b>
+      </h5>
       <h6 class="card-title"><b></b></h6>
         <BR>
     </div>
   </div>
 
-  <!-- Passo 1 !-->
   <div class="card mb-3">
-      <div class="card-body">
-        <h5 class="card-title"><b>Macros</b></h5>
-        <h6 class="card-title"><b></b></h6>
-          <BR>
-        <p class="card-text"><b>Passo 1 </b></p>
-        <p class="card-text">Cadastrar todas as Macros </p>
-      </div>
+    <div class="card-body">
+      <h5 class="card-title"><b>Pacientes do Mapa: 
+      </b>
+      </h5>
+      <h6 class="card-title"><b></b></h6>
+        <BR>
     </div>
+  </div>
 
+<?php 
+$tabela = incluir_mapa_p2::all(); 
+$items  = incluir_mapa_p2::where('idMapa',$idm)->get();
+?>
 
-    <!-- Passo 2 !-->
-    <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title"><b>Hospitais</b></h5>
+@foreach ($items as $m)
+
+   <div class="card mb-3">
+   <div class="card-body">
+   <p class="card-text"><b> Id do Registro: {{$m->id }} </b></p>
+            <?php $idReg=$m->id; ?>
+          <h5 class="card-title"><b>Id do Paciente: {{$m->idPaciente}}</b></h5>
           <h6 class="card-title"><b></b></h6>
-            <BR>
-          <p class="card-text"><b>Passo 2 </b></p>
-          <p class="card-text">Cadastrar todos os Hospitais </p>
-        </div>
-      </div>
-
-
-    <!-- Passo 3 !-->
-    <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title"><b>Usuários com perfil de  Regulação</b></h5>
-          <h6 class="card-title"><b></b></h6>
-            <BR>
-          <p class="card-text"><b>Ao cadastrar usuários </b></p>
-          <p class="card-text">Selecionar as Macros e não selecionar Hospital</p>
-        </div>
-      </div>
-
-
-    <!-- Passo 4 !-->
-    <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title"><b>Usuários com perfil de Hospital</b></h5>
-          <h6 class="card-title"><b></b></h6>
-            <BR>
-          <p class="card-text"><b>Ao cadastrar usuários </b></p>
-          <p class="card-text">Selecionar a Macro e  selecionar seu Hospital</p>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
+          <p class="card-text"><b> Id do Mapa: {{$m->idMapa }} </b></p>
+          <p class="card-text"><b> Código da Solicitacao: {{$m->codSolicitacao }} </b></p>
+          <p class="card-text"><b> CNS: {{$m->cns }} </b></p>
+          <p class="card-text"><b> Nome do Usuário: {{$m->nomeUsuario}} </b></p>
+          <td>
+     </div>
+    </div>
+ 
+@endforeach
 @endsection
-
-
-

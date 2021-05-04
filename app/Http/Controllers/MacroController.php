@@ -74,5 +74,8 @@ class MacroController extends Controller
                         ->with('Sucesso','macro deletada com Sucesso');
     }
 
+    
+
+
 
 }

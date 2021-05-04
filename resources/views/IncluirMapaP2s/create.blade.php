@@ -34,61 +34,6 @@ if($mpac<>$m){
         </div>
     </div>
 
-<!-- Código do Modal -->
-
-<div class="alert alert-success" role="alert">
- <p>Antes de vincular o paciente ao mapa clique no botão
-  abaixo para retirar o paciente da fila. </p>  
-</div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Retirar paciente da fila</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-
-            
-      <table class="table table-bordered">
-        <tr>
-            <th>id</th>
-            <th>Solicitação</th>
-            <th>cns</th>
-            <th>Nome do Usuário</th>
-            <th>Vizualização</th>
-        </tr>
-
-    @foreach ($itensP as $paciente)
-	    <tr>
-            <td>{{$paciente->id }}</td>
-            <td>{{$paciente->solicitacao }}</td>
-            <td>{{$paciente->cns }}</td>
-            <td>{{$paciente->nomedousuario }}</td>
-            <td>{{$paciente->statusSolicitacao}}</td>
-            <td>{{$paciente->municipio}}
-      </tr>
-    @endforeach 
-</table>
-
-
-
-
-<div class="alert alert-dark" role="alert">
-
-    
-
-
-Operação realizada com sucesso 
-
-
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar</button>
-      </div>
-        </div>
-  </div>
-</div>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Ops!</strong> Houve algum erro na sua entrada<br><br>
@@ -114,7 +59,7 @@ Operação realizada com sucesso
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Devolver paciente de volta a fila 
+  Retirar o Paciente da Fila 
 </button>
 
 <!-- Modal -->
@@ -122,7 +67,7 @@ Operação realizada com sucesso
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Devolvendo paciente de volta a fila</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Retirando Paciente da Fila </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -134,7 +79,7 @@ Operação realizada com sucesso
         ?>
         </p>
 
-        <p>Paciente devolvido a fila com sucesso</p>
+        <p>Paciente retirado da fila com sucesso</p>
 
         <p> Nome de Úsuario : {{$paciente->nomedousuario }}</p>
 
@@ -142,7 +87,7 @@ Operação realizada com sucesso
         <p> CNS : {{$paciente->cns }}<p>
 
         <?php
-        Pacientes::where('id', $id)->update(['statusSolicitacao' => 'N']); 
+        Pacientes::where('id', $id)->update(['statusSolicitacao' => 'S']); 
 
         ?>
       </div>
