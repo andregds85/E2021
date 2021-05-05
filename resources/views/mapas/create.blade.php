@@ -17,7 +17,6 @@
         </div>
     </div>
 
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Ops!</strong> Houve algum erro na sua entrada<br><br>

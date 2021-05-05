@@ -46,10 +46,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('continua', mapasRegController::class);
     Route::resource('vizualiza', mapasRegController::class);
     Route::resource('contar', contarController::class);
+    Route::resource('excluir', contarController::class);
+   
+    Route::get('excluir', 'App\Http\Controllers\contarController@show');
+
 
 
     
-
+    
 
 
 

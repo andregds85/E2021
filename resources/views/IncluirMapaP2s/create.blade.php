@@ -6,7 +6,6 @@ echo $id;
 
 $m=Auth::user()->macro;
 
-
 use App\Models\Pacientes;
 $tabela = Pacientes::all();
 $itensP = Pacientes::where('id',$id)->get();
@@ -17,13 +16,8 @@ $itensP = Pacientes::where('id',$id)->get();
 @endforeach 
 <?php   
 if($mpac<>$m){
-  ?>
-      <script>
-          window.location.href = "/";
-      </script>
-  
-   }
-   <?php }?> 
+    session()->flush();
+}?> 
 
    <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -46,7 +40,6 @@ if($mpac<>$m){
     @endif
 
 <p class="mb-0"></p>
-
 <br>
   <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Caso tenha retirado o paciente da Fila.</h4>
@@ -56,10 +49,6 @@ if($mpac<>$m){
 </div>
 
 <p class="mb-0"></p>
-
-
-
-
 <form action="{{ route('incluirMapaP2s.store') }}" method="POST">
     	@csrf
 
@@ -71,8 +60,6 @@ if($mpac<>$m){
 use App\Models\mapas;
 $tabelaMapa = mapas::all();
 $tabelaM = mapas::where('macro',$m)->get();
-
-
 ?>
 	           
              
@@ -115,8 +102,7 @@ $tabelaM = mapas::where('macro',$m)->get();
 </div> 
 
 
-
-       <div class="row">
+ <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
                 <label for="exampleInputCategoria">CNS</label>

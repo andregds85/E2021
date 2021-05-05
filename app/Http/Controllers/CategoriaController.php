@@ -57,7 +57,6 @@ class CategoriaController extends Controller
 
         ]);
 
-
         $categoria->update($request->all());
         return redirect()->route('categorias.index')
                         ->with('Sucesso','Categorias Atualizada com Sucesso');

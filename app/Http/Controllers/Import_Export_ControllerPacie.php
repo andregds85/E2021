@@ -19,9 +19,6 @@ class Import_Export_ControllerPacie extends Controller
          $this->middleware('permission:administrador-delete', ['only' => ['destroy']]);
     }
 
-
-
-
     public function importExport()
     {
        return view('importPaciente');

@@ -4,6 +4,14 @@
 use App\Http\Controllers\MapasController;
 use App\Models\mapas;
 
+$perfil= Auth::user()->perfil;
+
+
+if($perfil<>"regulacao"){
+  session()->flush();
+}
+
+
 use App\Http\Controllers\IncluirMapaP2sController;
 use App\Models\incluir_mapa_p2;
 
@@ -71,7 +79,13 @@ $items  = incluir_mapa_p2::where('idMapa',$idm)->get();
           <p class="card-text"><b> Código da Solicitacao: {{$m->codSolicitacao }} </b></p>
           <p class="card-text"><b> CNS: {{$m->cns }} </b></p>
           <p class="card-text"><b> Nome do Usuário: {{$m->nomeUsuario}} </b></p>
-          <td>
+       <td>
+       <p class="card-text">
+       <a href="{{url('excluir', ['id' => $m->id]) }}">Excluir</a>
+       </p>
+      </td>
+
+            
      </div>
     </div>
  

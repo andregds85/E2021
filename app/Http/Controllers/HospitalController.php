@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class HospitalController extends Controller
 {
+
+
+
     function __construct()
     {
          $this->middleware('permission:regulacao-list|regulacao-create|regulacao-edit|regulacao-delete', ['only' => ['index','show','__invoke']]);
@@ -19,17 +22,23 @@ class HospitalController extends Controller
          $this->middleware('permission:regulacao-delete', ['only' => ['destroy']]);
     }
 
+
+
     public function index()
     {
          $hospital = Hospital::orderby('id', 'asc')->paginate();
             return view('hospital.index',['itens' => $hospital]);
     }
 
+
+
     public function store(Request $request)
     {
 
     }
 
+
+    
     public function show($id){
      return view('hospital.vizualiza',['id'=>$id]);
     }
