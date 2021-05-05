@@ -24,7 +24,11 @@ class contarController extends Controller
         return view('contar.index');
     }
   
-
+    
+    public function destroy()
+    {
+        return view('contar.destroy');
+    }
 
 
     

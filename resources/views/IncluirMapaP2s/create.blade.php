@@ -57,46 +57,6 @@ if($mpac<>$m){
 
 <p class="mb-0"></p>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Retirar o Paciente da Fila 
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Retirando Paciente da Fila </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>ID:         
-        <?php
-        echo $id;
-        ?>
-        </p>
-
-        <p>Paciente retirado da fila com sucesso</p>
-
-        <p> Nome de Úsuario : {{$paciente->nomedousuario }}</p>
-
-        <p> Solicitação : {{$paciente->solicitacao }} </p>
-        <p> CNS : {{$paciente->cns }}<p>
-
-        <?php
-        Pacientes::where('id', $id)->update(['statusSolicitacao' => 'S']); 
-
-        ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

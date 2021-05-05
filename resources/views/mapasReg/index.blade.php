@@ -77,22 +77,3 @@ $todos= incluir_mapa_p2::all();
 
 
 
-Nome: Amélia Vieira
-CPF: 889.823.869-04
-e-mail: liavieira51@yahoo.com.br
-Celular: (47) 99763-4902
-Hospital Regional Hans Dieter Schmidt
-
-Login:vieiraa
-Senha:102030
-
-
-Nome: Joseane Aparecida Fernandes dos Santos
-CPF: 871.668.799-04
-e-mail:joseaneapafer@gmail.com
-Celular: (47) 99951-9577
-Hospital Regional Hans Dieter Schmidt
-
-Login:joseaneaf
-Senha:102030
-

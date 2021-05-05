@@ -40,21 +40,12 @@ class IncluirMapaP2sController extends Controller
         ]);
 
         incluir_mapa_p2::create($request->all());
-     /* Pacientes::where('id', 'idPaciente')->update(['statusSolicitacao' => 'S']); */
+        Pacientes::where('id', 'idPaciente')->update(['statusSolicitacao' => 'S']); 
         return redirect()->route('mapasReg.index')
                         ->with('Sucesso','Paciente Incluido no Mapa com Sucesso.');
     }
 
-    
-    public function apagar($id)
-    {
-        
-        echo "testando o Methodo";
-    
-    }
-
-
-
+  
 
     
 }
