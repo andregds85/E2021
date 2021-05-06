@@ -2,6 +2,26 @@
 @section('content')
 
 
+<?php $perfil=Auth::user()->perfil; 
+
+if($perfil<>"regulacao"){
+  session()->flush();
+}
+
+?> </b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Passo 1 !-->
   <div class="card mb-3">
       <div class="card-body">
@@ -40,7 +60,6 @@ $todos= incluir_mapa_p2::all();
 
 
 @foreach ($itens as $mapa)
-       
    <!-- Passo 2 !-->
     <div class="card mb-3">
         <div class="card-body">
@@ -61,6 +80,8 @@ $todos= incluir_mapa_p2::all();
        </p>
       </td>
      </td>
+
+
 
 
 

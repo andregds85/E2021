@@ -1,6 +1,7 @@
 @extends('layouts3.app')
 @section('content')
 
+
 <!-- Passo 1 !-->
   <div class="card mb-3">
       <div class="card-body">
@@ -48,6 +49,9 @@
                 @foreach($tabela as $item)
                <?php $b=$item->id; ?>
                <?php $c=$item->name; ?>
+               <?php $macroCategoria=$item->macro; ?>
+             
+                 
 
                 <?php
                 if($b==$a){

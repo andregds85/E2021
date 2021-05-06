@@ -19,6 +19,7 @@ class CreateIncluirMapaP2sTable extends Migration
             $table->string('municipio');
             $table->string('usuarioSistema');
             $table->string('cpfUsuarioSistema');
+            $table->string('macro');
             $table->timestamps();
         });
     }

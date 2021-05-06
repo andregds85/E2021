@@ -156,6 +156,8 @@ $cpfUsuarioSistema=Auth::user()->cpf;
 </div>            
 
 
+
+
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
@@ -165,7 +167,22 @@ $cpfUsuarioSistema=Auth::user()->cpf;
                 </select>
             </div>
         </div>
-</div>       
+</div>  
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Macro </label>
+                <select class="form-control" name="macro" id="macro">
+                <option value='<?php echo $m=Auth::user()->macro; ?>'><?php echo $m=Auth::user()->macro; ?></option>
+                </select>
+            </div>
+        </div>
+</div>
+
+
 <br>
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Confirmar Inserção do Paciente</button>

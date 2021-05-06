@@ -114,9 +114,9 @@
       <div class="col-xs-12 col-sm-12 col-md-12">
 	   <div class="form-group">
 	       <strong>Vagas:</strong>
-		  <input type="text" name="vagas" class="form-control" placeholder="Quantas vagas para o procedimento">
-      </div>
-      </div>
+   <input type="text" name="vagas" class="form-control" placeholder="Quantas vagas para o procedimento">
+   </div>
+   </div>
 
    
     <div class="form-group">

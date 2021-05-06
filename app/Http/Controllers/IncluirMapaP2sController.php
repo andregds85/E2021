@@ -18,20 +18,17 @@ class IncluirMapaP2sController extends Controller
          $this->middleware('permission:mapas-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:mapas-delete', ['only' => ['destroy']]);
     }
- 
-    public function index()
+     public function index()
     {
         return view('IncluirMapaP2s.index');
     }
-    
+   
     public function create()
     {
         return view('IncluirMapaP2s.create');
     }
-
      public function store(Request $request)
     {
-
             request()->validate([
             'idPaciente' => 'required',
             'codSolicitacao' => 'required',
@@ -45,9 +42,6 @@ class IncluirMapaP2sController extends Controller
         return redirect()->route('mapasReg.index')
                         ->with('Sucesso','Paciente Incluido no Mapa com Sucesso.');
     }
-
-  
-
     
 }
 
