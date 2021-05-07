@@ -73,13 +73,16 @@ Mapas dos Layouts
 
 Layouts         Principal
 
-Layouts2        Sou do Hospital
+Layouts 2       Sou do Hospital
 
 Layouts 3       Regulação
 
 Layouts 4       Administrador
 
 Layouts 5       Municipio
+
+Layouts 6       Médico Regulador
+
 
 
 

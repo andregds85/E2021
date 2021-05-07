@@ -19,11 +19,15 @@ class MunicipioController extends Controller
          $this->middleware('permission:municipio-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:municipio-delete', ['only' => ['destroy']]);
     }
-
     
     public function index()
     {
             return view('municipio.index');
+    }
+
+    public function create(){
+     
+        return view('municipio.create');
     }
 
     

@@ -19,6 +19,7 @@ class incluir_mapa_p2 extends Model
         'usuarioSistema',
         'cpfUsuarioSistema',
         'macro',
+        'obs',
       ];
 }
 

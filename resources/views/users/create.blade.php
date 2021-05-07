@@ -118,8 +118,8 @@ echo $id;
                 <option value=''>Selecione o Perfil</option>
                 <option value='administrador'>Administrador</option>
                 <option value='regulacao'>Regulacao</option>
-                <option value='hostpital'>Hospital</option>
-                <option value='gestor'>Gestor Municipal / Estadual</option>
+                <option value='hospital'>Hospital</option>
+                <option value='municipal'>Municipal</option>
                 </select>
             </div>
         </div>
