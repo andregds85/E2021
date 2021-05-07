@@ -34,7 +34,11 @@ class PermissionTableSeeder extends Seeder
            'municipio-list',
            'municipio-create',
            'municipio-edit',
-           'municipio-delete'
+           'municipio-delete',
+           'medicoRegulador-list',
+           'medicoRegulador-create',
+           'medicoRegulador-edit',
+           'medicoRegulador-delete'
           ];
 
         
