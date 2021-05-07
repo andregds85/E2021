@@ -30,7 +30,11 @@ class PermissionTableSeeder extends Seeder
            'mapas-list',
            'mapas-create',
            'mapas-edit',
-           'mapas-delete'
+           'mapas-delete',
+           'municipio-list',
+           'municipio-create',
+           'municipio-edit',
+           'municipio-delete'
           ];
 
         

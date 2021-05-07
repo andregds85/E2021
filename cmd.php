@@ -79,9 +79,12 @@ Layouts 3       Regulação
 
 Layouts 4       Administrador
 
+Layouts 5       Municipio
+
+
+
 
 php artisan make:model incluir_mapa_p2 -m       --
-
 
 
 php artisan make:controller admController --resource

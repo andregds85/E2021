@@ -16,7 +16,7 @@ use App\Http\Controllers\macro;
 use App\Http\Controllers\mapasRegController;
 use App\Http\Controllers\incluirMapaP2sController;
 use App\Http\Controllers\contarController;
-
+use App\Http\Controllers\MunicipioController;
 
 
 
@@ -47,7 +47,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('vizualiza', mapasRegController::class);
     Route::resource('contar', contarController::class);
     Route::resource('excluir', contarController::class);
-   
+    Route::resource('municipio', MunicipioController::class);
+    
+
+
+
+    
     Route::get('excluir', 'App\Http\Controllers\contarController@show');
 
 
