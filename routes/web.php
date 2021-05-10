@@ -17,6 +17,7 @@ use App\Http\Controllers\incluirMapaP2sController;
 use App\Http\Controllers\contarController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\MedicoReguladorController;
+use App\Http\Controllers\obsMapaP2sController;
 
 
 
@@ -51,8 +52,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('excluir', contarController::class);
     Route::resource('municipio', MunicipioController::class);
     Route::resource('regulador', MedicoReguladorController::class);
+    Route::resource('observacao', obsMapaP2sController::class);
     
     
+
+
+
     Route::get('excluir', 'App\Http\Controllers\contarController@show');
 
 

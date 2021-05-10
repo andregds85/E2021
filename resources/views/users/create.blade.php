@@ -120,6 +120,7 @@ echo $id;
                 <option value='regulacao'>Regulacao</option>
                 <option value='hospital'>Hospital</option>
                 <option value='municipal'>Municipal</option>
+                <option value='regulador'>Médico Regulador</option>
                 </select>
             </div>
         </div>

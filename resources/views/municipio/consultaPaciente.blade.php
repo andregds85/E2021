@@ -1,5 +1,8 @@
 @extends('layouts5.app')
 @section('content')
+
+<a href="https://wallacemaxters.com.br/blog/2020/03/29/laravel-como-criar-filtros-de-pesquisa-no-eloquent-de-maneira-eficiente"> Consultas de Palavras com Eloquent </a>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

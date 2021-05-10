@@ -2,34 +2,22 @@ Arrumar a parte dos usuários editar quando buscar a macro buscar somente os
 hospais daquela macro.
 
 
-
 php artisan migrate:reset
-
 
 php artisan make:seeder PermissionTableSeeder
 
-
 php artisan db:seed --class=PermissionTableSeeder
-
 
 php artisan make:seeder macroSeeder
 
 php artisan db:seed --class=macroSeeder
 
-
-
 php artisan make:seeder CreateAdminUserSeeder
-
 
 php artisan db:seed --class=CreateAdminUserSeeder
 
-
-
 php artisan make:seeder CategoriaSeederM2
 php artisan db:seed --class=CategoriaSeederM2
-
-
-
 
 1	CER MACRO FOZ DO RIO ITAJAI 42C65 / certo
 2	CER MACRO GF POLIS 42C15 /  certo 
@@ -39,12 +27,6 @@ php artisan db:seed --class=CategoriaSeederM2
 6	CER MACRO SERRA 42C70  / 
 7	CER MACRO SUL 42C67
 8	CER MACRO VALE DO ITAJAI 42C63
-
-
-
-
-
-
 
 Criar uma Model e Migrations
 php artisan make:model nome da Model -m
@@ -84,19 +66,9 @@ Layouts 5       Municipio
 Layouts 6       Médico Regulador
 
 
-
-
-
 php artisan make:model incluir_mapa_p2 -m       --
 
-
 php artisan make:controller admController --resource
-
-
-
-
-
-
 
 ---------------------------------------------------------------------------
 eloquent com dois where
@@ -116,7 +88,7 @@ eloquent para utilizar where   no where macro = id;
  use App\Models\Categoria;
  $tabela = categoria::all();
  $itensP = categoria::where('macro',$id)->get(); ?>
-  ?>
+ ?>
 ----------------------------------------------------------------------------
 Passagem de Paramero direto view
 
@@ -129,5 +101,3 @@ $id=$_GET['id'];
 echo $id;
 ?>
 -----------------------------------------------------------------------------
-
-
