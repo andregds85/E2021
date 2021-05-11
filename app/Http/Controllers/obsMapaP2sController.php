@@ -23,7 +23,7 @@ class obsMapaP2sController extends Controller
         return view('municipio.mapas');
     }
    
- 
+
     
 
 

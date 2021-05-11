@@ -27,18 +27,14 @@ class HospitalController extends Controller
     public function index()
     {
          $hospital = Hospital::orderby('id', 'asc')->paginate();
-            return view('hospital.index',['itens' => $hospital]);
+         return view('hospital.index',['itens' => $hospital]);
     }
-
-
 
     public function store(Request $request)
     {
 
     }
-
-
-    
+   
     public function show($id){
      return view('hospital.vizualiza',['id'=>$id]);
     }
@@ -47,7 +43,6 @@ class HospitalController extends Controller
     {
 
     }
-
     public function update(Request $request, $id)
     {
     }
@@ -59,12 +54,6 @@ class HospitalController extends Controller
     public function id($id){
         return  $id;
     }
-
-
-
-
-
-
 
 
 }

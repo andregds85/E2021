@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\PacienteController;
-use App\Models\Categoria;
-use App\Models\Hospital;
-use App\Models\Pacientes;
+
 use Illuminate\Http\Request;
 
 class MunicipioController extends Controller
@@ -22,14 +19,27 @@ class MunicipioController extends Controller
     
     public function index()
     {
-            return view('municipio.index');
+       return view('municipio.index');
     }
 
-    public function create(){
-     
-        return view('municipio.create');
+    public function show($id){
+       return view('municipio.mapasFull',['id'=>$id]); 
+      
     }
 
     
+    public function paciente($id){
 
+        $a="Testando a Mensagem Qualquer";
+        return $a;
+        
+        /*return view('municipio.pacienteFull',['id'=>$id]); */
+       
+     }
+
+
+    
+
+    
+    
 }
