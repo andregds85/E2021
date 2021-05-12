@@ -27,15 +27,13 @@ class MunicipioController extends Controller
       
     }
 
-    
-    public function paciente($id){
+    public function create(){
+      return view('municipio.create'); 
+     
+   }
 
-        $a="Testando a Mensagem Qualquer";
-        return $a;
-        
-        /*return view('municipio.pacienteFull',['id'=>$id]); */
-       
-     }
+ 
+ 
 
 
     

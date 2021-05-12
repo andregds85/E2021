@@ -55,10 +55,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('observacao', obsMapaP2sController::class);
 
 
-   Route::get('munipac', 'App\Http\Controllers\MunicipioController@paciente');
+    Route::get('munipac', 'App\Http\Controllers\MunicipioController@paciente');
     
-   
-   
     Route::get('excluir', 'App\Http\Controllers\contarController@show');
     Route::get('mapasfull', 'App\Http\Controllers\obsMapaP2sController@mapasFull');
 
