@@ -2,19 +2,12 @@
 @section('content')
 
 <?php
-  
 $macro=Auth::user()->macro;
 $perfil=Auth::user()->perfil;
-$login=Auth::user()->login;
+$login=Auth::user()->email;
 $cpf=Auth::user()->cpf;
-
+$id=$_GET['id'];
 ?>
-
-
-
-
-
-
 
 <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -41,15 +34,29 @@ $cpf=Auth::user()->cpf;
     @endif
 
 
-<form action="{{ route('municipio.store') }}" method="POST">
+<form action="{{route('municipio.store')}}" method="POST">
     	@csrf
+
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Id da Inscrição</label>
+                <select class="form-control" name="idIncMapa" id="idIncMapa">
+                <option value='<?php echo $id; ?>'><?php echo $id; ?></option>
+                </select>
+            </div>
+        </div>
+</div>
+
+
 
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
                 <label for="exampleInputCategoria">Observação</label>
-                <select class="form-control" name="categorias_id" id="categoria">
+                <select class="form-control" name="obsMuni" id="obsMuni">
                 <option value='1- Aguarda Cirugia'>1- Aguarda Cirugia</option>
                 <option value='2- Ja Realizou no Sus'>2- Ja Realizou no Sus</option>
                 <option value='3- Ja Realizou Particular'>3- Ja Realizou Particular</option>
@@ -67,50 +74,41 @@ $cpf=Auth::user()->cpf;
 </div>
 
 
-
-
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-                <label for="exampleInputCategoria">Observação</label>
+                <label for="exampleInputCategoria">Login:</label>
                 <select class="form-control" name="login" id="login">
-                <option value=<?php echo $login; ?>><?php echo $login; ?></option>
+                <option value='<?php echo $login; ?>'><?php echo $login; ?></option>
                 </select>
             </div>
         </div>
 </div>
 
-         <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>CNS:</strong>
-		            <input type="text" name="cns" class="form-control" placeholder="Entre com o CNS">
-           </div>
 
 
-          <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Nome do Usuário:</strong>
-		            <input type="text" name="nomedousuario" class="form-control" placeholder="Entre com o Nome do Usuário">
-           </div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">CPF:</label>
+                <select class="form-control" name="cpf" id="cpf">
+                <option value='<?php echo $cpf; ?>'><?php echo $cpf; ?></option>
+                </select>
+            </div>
+        </div>
+</div>
 
 
-          <div class="row">
-		    <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Nome do Municipio:</strong>
-		            <input type="text" name="municipio" class="form-control" placeholder="Entre com o Nome do Municipio">
-           </div>
-
-
-          <div class="row">
-		   <div class="col-xs-12 col-sm-12 col-md-12">
-		        <div class="form-group">
-		            <strong>Data de Solicitação</strong>
-		            <input type="date" name="datasolicitacao" class="form-control" placeholder="Entre com a Data de Solicitação">
-           </div>
-
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Macro</label>
+                <select class="form-control" name="macro" id="macro">
+                <option value='<?php echo $macro; ?>'><?php echo $macro; ?></option>
+                </select>
+            </div>
+        </div>
+</div>
 
   
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">

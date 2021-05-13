@@ -52,8 +52,6 @@ if($mpac<>$m){
 <form action="{{ route('incluirMapaP2s.store') }}" method="POST">
     	@csrf
 
-<!-- chama  a tabela categorias dentro da tabela pacientes -->
-<!-- fim do trecho de chamda de categorias -->
 <br>
 
 <?php 

@@ -14,5 +14,7 @@ class municipio extends Model
         'obsMuni',
         'login',
         'cpf',
+        'macro',
+
       ];
 }

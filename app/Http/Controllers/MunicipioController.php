@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\municipio;
 use Illuminate\Http\Request;
+
 
 class MunicipioController extends Controller
 {
@@ -24,20 +25,26 @@ class MunicipioController extends Controller
 
     public function show($id){
        return view('municipio.mapasFull',['id'=>$id]); 
-      
-    }
+     }
 
     public function create(){
       return view('municipio.create'); 
-     
-   }
+    }
 
- 
- 
+   public function store(Request $request)
+   {
+       request()->validate([
+           'idIncMapa' => 'required',
+           'obsMuni' => 'required',
+           'login' => 'required',
+           'cpf' => 'required',
+           'macro' => 'required',
+            ]);
 
+            municipio::create($request->all());
+            return redirect()->route('municipio.index')
+                            ->with('Sucesso','Observação do Municipio Criada com Sucesso.');
 
-    
-
-    
+         }
     
 }
