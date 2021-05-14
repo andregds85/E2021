@@ -113,11 +113,7 @@ $iten = mapas::where('id',$idMapaa)->get();
           <p class="card-text"><b> Login: {{$b->login}} </b></p>
           <p class="card-text"><b> Criado em : {{$b->created_at }} </b></p>
           <p class="card-text"><b> Atualizado em : {{$b->updated_at }} </b></p>
-
-
-          
-          
-          
+  
 
      </td>
     </div>

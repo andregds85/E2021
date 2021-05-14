@@ -6,10 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\municipio;
 use Illuminate\Http\Request;
 
-
 class MunicipioController extends Controller
 {
-
     function __construct()
     {
          $this->middleware('permission:municipio-list|municipio-create|municipio-edit|municipio-delete', ['only' => ['index','show','__invoke']]);
@@ -18,6 +16,7 @@ class MunicipioController extends Controller
          $this->middleware('permission:municipio-delete', ['only' => ['destroy']]);
     }
     
+
     public function index()
     {
        return view('municipio.index');
@@ -48,3 +47,5 @@ class MunicipioController extends Controller
          }
     
 }
+
+

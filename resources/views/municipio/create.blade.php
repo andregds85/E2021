@@ -7,6 +7,12 @@ $perfil=Auth::user()->perfil;
 $login=Auth::user()->email;
 $cpf=Auth::user()->cpf;
 $id=$_GET['id'];
+
+
+use App\Models\municipio;
+use App\Http\Controllers\MunicipioController;
+
+
 ?>
 
 <div class="row">

@@ -40,7 +40,6 @@ class MacroController extends Controller
         ]);
 
         Macro::create($request->all());
-
         return redirect()->route('macros.index')
                         ->with('Sucesso','macro criada com  Sucesso.');
     }
